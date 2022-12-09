@@ -20,7 +20,7 @@
                         <div class="card-body p-5">
                             <form class="m-3" action="auth.php" method="POST">
                                 <img class="img-fluid" src="img/login.png" alt="" />
-                                <p class="h3 text-center mb-4 text-dark">Sign In</p>
+                                <p class="h3 text-center mb-4 text-dark">Login</p>
                                 <?php
                                     if(isset($_GET['error']))
                                     {

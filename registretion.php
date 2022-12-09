@@ -1,94 +1,127 @@
-   <html lang = "en">  
-   <head>  
-      <meta charset = "utf-8">  
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">  
-      <link rel = "stylesheet"   
-         href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  
-         integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"   
-         crossorigin = "anonymous">         
-      <title>  Registration Form  </title>  
-      <style>  
-      body {  
-      color: #bd2130;  
-      }  
-      .card {  
-    position: relative;  
-    display: -ms-flexbox;  
-    display: flex;  
-    -ms-flex-direction: column;  
-    flex-direction: column;  
-    min-width: 0;  
-    word-wrap: break-word;  
-    background-color: #f8f9fa;  
-    background-clip: border-box;  
-    border: 1px solid rgba(0,0,0,.125);  
-    border-radius: .15rem;  
-}  
-      </style>  
-   </head>  
-   <body >  
-<section class="vh-100" style="background-color: black; ">  
-  <div class="container h-150 ">  
-    <div class="row d-flex justify-content-center align-items-center h-150">  
-      <div class="col-xl-7">  
-        <h1 class="text-white mb-4 text-center"> Registration form </h1>  
-        <div class="card" style="border-radius: 15px;">  
-          <div class="card-body">  
-            <div class="row align-items-center pt-4 pb-3">  
-              <div class="col-md-3 ps-5">  
-                <h6 class="mb-0"> Full name </h6>  
-              </div>  
-              <div class="col-md-9 pe-5">  
-                <input type="text" class="form-control form-control-lg" />  
-              </div>  
-            </div>  
-            <hr class="mx-n3">  
-            <div class="row align-items-center py-3">  
-              <div class="col-md-3 ps-5">  
-                <h6 class="mb-0"> Email address </h6>  
-              </div>  
-              <div class="col-md-9 pe-5">  
-                <input type="email" class="form-control form-control-lg" placeholder="dummy@example.com" />  
-              </div>  
-            </div>  
-    <hr class="mx-n3">  
-            <div class="row align-items-center py-3">  
-              <div class="col-md-3 ps-5">  
-                <h6 class="mb-0"> Phone Number</h6>  
-              </div>  
-              <div class="col-md-9 pe-5">  
-                <input type="email" class="form-control form-control-lg" />  
-              </div>  
-            </div>  
-            <hr class="mx-n3">  
-            <div class="row align-items-center py-3">  
-              <div class="col-md-3 ps-5">  
-                <h6 class="mb-0"> Address </h6>  
-              </div>  
-              <div class="col-md-9 pe-5">  
-                <textarea class="form-control" rows="3" placeholder="Message sent to the employer"> </textarea>  
-              </div>  
-            </div>  
-            <hr class="mx-n3">  
-            <div class="row align-items-center py-3">  
-              <div class="col-md-3 ps-5">  
-                <h6 class="mb-0"> Password </h6>  
-              </div>  
-              <div class="col-md-9 pe-5">  
-                <input type="password" class="form-control form-control-lg" />  
-              </div>  
-              </div>  
-            </div>  
-            
-            <hr class="mx-n3">  
-            <div class="px-5 py-4"> <center>
-              <button type="submit" class="btn btn-primary btn-lg  " > Submit </button></center>  
-            </div>  
-          </div>  
-        </div>  
-      </div>  
-    </div>  
-  </div>  
-</section>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/js/bootstrap.min.js" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LOGIN PAGE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    .error {
+        color: red;
+        padding: 5px;
+    }
+    </style>
+</head>
+
+<body style="background-color: rgb(78, 104, 219)">
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="box_color card rounded">
+                        <div class="card-body p-5">
+                            <form id="mform" action="insert.php" method="POST" class="m-2">
+                                <p class="h3 text-center mb-4 text-dark">Sign Up</p>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" placeholder="Name" id="name" name="name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email </label>
+                                    <input type="email" class="form-control" placeholder="Email" id="email"
+                                        name="email" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="text" class="form-control" placeholder="Phone Number" id="phone"
+                                        name="phone" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" placeholder="Password" id="password"
+                                        name="password" />
+                                </div>
+                                
+
+                                <!-- <div class="form-group">
+                    <label for="imahe">Picture</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      placeholder="Re-  Password"
+                      id="pwd"
+                    />
+                  </div> -->
+                              
+                                <button type="submit" name="submit" value="submit" class="btn btn-primary btn-block">
+                                    Register
+                                </button>
+
+                                <p class="text-center mt-1">
+                                    Already Account
+                                    <a href="index.php"><b>Sign In</b></a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jquery validation CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+        integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    jQuery("#mform").validate({
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true,
+            },
+            password: {
+                required: true,
+                minlength: 4,
+            },
+            phone: {
+                required: true,
+                minlength: 10
+            },
+            cpassword: {
+                required: true,
+                minlength: 4,
+            },
+        },
+        messages: {
+            name: "Enter Your Name..!",
+            email: {
+                required: "Please Enter Your Email Address...!",
+                email: "Please Enter Valid Email Address...!",
+            },
+            password: {
+                required: "Please Enter Your Strong Password...!",
+                minlength: "Enter Minimum 4 Charcater",
+            },
+            phone: {
+                reuired: "Enter Your Phone Number...!",
+                minlength: "Phone Number must be 10 Digit..!"
+            },
+            cpassword: {
+                required: "Please Enter Your Strong Password...!",
+                minlength: "Enter Minimum 4 Charcater",
+            },
+        },
+        submitHandler: function(form) {
+            form.submit();
+        },
+    });
+    </script>
+</body>
+
+</html>

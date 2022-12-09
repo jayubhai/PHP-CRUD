@@ -1,24 +1,28 @@
 <?php
+    include 'conn.php';
     session_start();
-    if(isset($_POST['email']) && isset($_POST['password']))
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+      
     {
-        $email = $_POST["email"];
-        $password = $_POST["password"];
         if($email=="admin@gmail.com" && $password=="jd")
         {
             $_SESSION['email']=$email;
-            header("Location:home.php"); 
+            header("Location:adminuser.php"); 
             
-        }
+        } 
         else
         {
-            header("Location:index.php?error=incorrect email and password");
-            
-        }
-    }
-    else
-    {
-        echo "same not password...";
-        
-    }
+            $sql = "select * from user where Email='$email' and password='$password'";
+            $res = mysqli_query($conn,$sql);
+            $row=mysqli_fetch_array($res);
+             if(is_array($row))
+             {
+                    $_SESSION['email']=$email;
+                    header("Location:home.php"); 
+             }
+        }   
+      
+    } 
+    
 ?>

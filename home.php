@@ -13,8 +13,10 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>Welcome to my page.....!</h1>
-    <a href="logout.php" class="btn btn-primary " >Logout</a>
+    <a href="logout.php" class="btn btn-primary"  >Logout</a>
+
 </body>
 </html>
 <?php 
